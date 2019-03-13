@@ -18,6 +18,11 @@
 
 		<!-- IMPORT partials/topic/badge.tpl -->
 
+        <span class="userinfo-extra">
+            <i class="fa fa-star"></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.user.uid}" class="formatted-number reputation">{posts.user.reputation}</span>&nbsp;|&nbsp;
+            <i class="fa fa-pencil"></i> <span class="formatted-number" component="user/postcount" data-uid="{posts.user.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
+        </span>
+
 		<!-- IF posts.user.banned -->
 		<span class="label label-danger">[[user:banned]]</span>
 		<!-- ENDIF posts.user.banned -->
@@ -59,10 +64,7 @@
 	<!-- ENDIF posts.user.signature -->
 
 	<small class="pull-right">
-        <span class="userinfo-extra">
-            <i class="fa fa-star"></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.user.uid}" class="formatted-number reputation">{posts.user.reputation}</span>&nbsp;|&nbsp;
-            <i class="fa fa-pencil"></i> <span class="formatted-number" component="user/postcount" data-uid="{posts.user.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
-        </span>
+
 		<span class="post-tools">
 			<a component="post/reply" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:reply]]</a>
 			<a component="post/quote" href="#" class="no-select <!-- IF !privileges.topics:reply -->hidden<!-- ENDIF !privileges.topics:reply -->">[[topic:quote]]</a>
