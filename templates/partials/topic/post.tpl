@@ -18,7 +18,7 @@
 
 		<!-- IMPORT partials/topic/badge.tpl -->
 
-        <span class="userinfo-extra">
+		<span class="userinfo-extra badge" style="background-color: rgb(128, 0, 128);">	
             <i class="fa fa-star"></i> <span component="user/reputation" data-reputation="{posts.user.reputation}" data-uid="{posts.user.uid}" class="formatted-number reputation">{posts.user.reputation}</span>&nbsp;|&nbsp;
             <i class="fa fa-pencil"></i> <span class="formatted-number" component="user/postcount" data-uid="{posts.user.uid}" data-postcount="{posts.user.postcount}">{posts.user.postcount}</span>
         </span>
